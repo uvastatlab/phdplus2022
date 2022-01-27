@@ -196,7 +196,7 @@ homes <- homes %>%
   select(-landusevalue) # remove variable
 
 homes <- homes %>% 
-  select(-c(cardnum, fp_open, owner, propname, cards, med_age))
+  select(-c(tmp, cardnum, fp_open, owner, propname, cards, med_age))
 
 rm(res, facvar, cond_levels)
 
