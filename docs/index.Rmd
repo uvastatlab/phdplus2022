@@ -46,6 +46,7 @@ Instructor: Marieke Jones
 
 While many researchers want to jump right into developing models or making predictions using their data, it critical to first understand the data. The process of initially investigating your data is called exploratory data analysis or EDA. EDA involves examining your data using sorting, tabulations, and numerical summaries. This session will introduce the dplyr package as a powerful tool that will allow learners to look for initial patterns in their data, check for missing data, and to set themselves up to move forward with analyses.
 
+[Workshop Materials](https://github.com/uvastatlab/phdplus2022/raw/main/docs/dataprep.zip)
 
 #### **Data Visualization**
 Wednesday, 2/16/2021   
