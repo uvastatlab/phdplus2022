@@ -254,9 +254,11 @@ Go to your "alb_homes_report.Rmd" file.
 
 1.  Use `knitr::kable` with the `medians` data frame.
 
-    -   set the `caption` to `"Median home values by high school district"`
-    -   set `col.names` to `c("HS District", "Number of Homes", "Median Value")`\
-    -   set `align` to left, center, center for the 3 columns
+```
+-   set the `caption` to `"Median home values by high school district"`
+-   set `col.names` to `c("HS District", "Number of Homes", "Median Value")`
+-   set `align` to left, center, center for the 3 columns
+```
 
 2.  Set echo option to FALSE for the chunk option.
 
@@ -280,7 +282,6 @@ Go to your "alb_homes_report.Rmd" file.
 p <- ggplot(homes_year_hs) +
   aes(x = yearbuilt, y = n, color = hsdistrict) +
   geom_line() +
-  ylim(0, NA) +
   scale_color_discrete("High School\nDistrict") +
   labs(x = "Year Built", y = "Number Homes Built",
        title = "Number of Homes Built Since 2000")
@@ -288,6 +289,10 @@ ggplotly(p)
 ```
 
 2.  Knit the document and inspect
+
+The `ggplotly()` function from the plotly package takes a plot created with ggplot2 and makes it interactive.[^2]
+
+[^2]: to export an interactive plot into a stand-alone HTML file, use the `htmlwidgets::saveWidget()` function. For example to save the plot above as plot.html, we would run the following code: `htmlwidgets::saveWidget(as_widget(ggplotly(p)), "plot.html")` Notice we need to call `ggplotly()` on our plot object, and then call `as_widget()` on our plotly object. 
 
 ## Inline R code
 
@@ -387,10 +392,10 @@ LaTeX is a sophisticated language for typesetting and is especially good for for
 To use LaTeX to create a math expression, use a set of two dollar signs for a "display" equation, or use a set of one dollar sign for an "inline" expression.
 
 ```
-    This is display:
-    $$y = x^2$$
+This is display:
+$$y = x^2$$
 
-    This is inline: $y = x^2$
+This is inline: $y = x^2$
 ```
 
 This is display:
@@ -632,9 +637,9 @@ To stop the execution of a command in RStudio, hit the Stop button in the upper 
 [^2]: The Stop button only appears _during_ a computation.
 ```
 
-To stop the execution of a command in RStudio, hit the Stop button in the upper right corner of the console.[^2] This may happen if you're running a loop or applying a function to a large data frame.
+To stop the execution of a command in RStudio, hit the Stop button in the upper right corner of the console.[^3] This may happen if you're running a loop or applying a function to a large data frame.
 
-[^2]: The Stop button only appears *during* a computation.
+[^3]: The Stop button only appears *during* a computation.
 
 #### Comments
 

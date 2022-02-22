@@ -405,13 +405,12 @@ homes_year_hs &lt;- homes %&gt;%
 <h3>Exercise 4</h3>
 <p>Go to your “alb_homes_report.Rmd” file.</p>
 <ol style="list-style-type: decimal">
-<li><p>Use <code>knitr::kable</code> with the <code>medians</code> data frame.</p>
-<ul>
-<li>set the <code>caption</code> to <code>&quot;Median home values by high school district&quot;</code></li>
-<li>set <code>col.names</code> to <code>c(&quot;HS District&quot;, &quot;Number of Homes&quot;, &quot;Median Value&quot;)</code><br />
-</li>
-<li>set <code>align</code> to left, center, center for the 3 columns</li>
-</ul></li>
+<li>Use <code>knitr::kable</code> with the <code>medians</code> data frame.</li>
+</ol>
+<pre><code>-   set the `caption` to `&quot;Median home values by high school district&quot;`
+-   set `col.names` to `c(&quot;HS District&quot;, &quot;Number of Homes&quot;, &quot;Median Value&quot;)`
+-   set `align` to left, center, center for the 3 columns</code></pre>
+<ol start="2" style="list-style-type: decimal">
 <li><p>Set echo option to FALSE for the chunk option.</p></li>
 <li><p>Knit and inspect</p></li>
 </ol>
@@ -431,7 +430,6 @@ homes_year_hs &lt;- homes %&gt;%
 <pre class="r"><code>p &lt;- ggplot(homes_year_hs) +
   aes(x = yearbuilt, y = n, color = hsdistrict) +
   geom_line() +
-  ylim(0, NA) +
   scale_color_discrete(&quot;High School\nDistrict&quot;) +
   labs(x = &quot;Year Built&quot;, y = &quot;Number Homes Built&quot;,
        title = &quot;Number of Homes Built Since 2000&quot;)
@@ -439,6 +437,7 @@ ggplotly(p)</code></pre>
 <ol start="2" style="list-style-type: decimal">
 <li>Knit the document and inspect</li>
 </ol>
+<p>The <code>ggplotly()</code> function from the plotly package takes a plot created with ggplot2 and makes it interactive.<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></p>
 </div>
 </div>
 <div id="inline-r-code" class="section level2">
@@ -516,10 +515,10 @@ medians$n[medians$hsdistrict == &quot;Albemarle&quot;]</code></pre>
 <h2>Using LaTeX to format math expressions</h2>
 <p>LaTeX is a sophisticated language for typesetting and is especially good for formatting math. Just about any journal article or book that features professional looking math or statistics almost certainly used LaTeX to create the math expressions. R Markdown allows us to use LaTeX “on the fly” in HTML documents for formatting math as we need it. (When you use R Markdown to create PDF documents, you’re using LaTeX under the hood. Within R Markdown documents that generate PDF output you can use raw LaTeX.)</p>
 <p>To use LaTeX to create a math expression, use a set of two dollar signs for a “display” equation, or use a set of one dollar sign for an “inline” expression.</p>
-<pre><code>    This is display:
-    $$y = x^2$$
+<pre><code>This is display:
+$$y = x^2$$
 
-    This is inline: $y = x^2$</code></pre>
+This is inline: $y = x^2$</code></pre>
 <p>This is display:</p>
 <p><span class="math display">\[y = x^2\]</span></p>
 <p>This is inline: <span class="math inline">\(y = x^2\)</span></p>
@@ -698,7 +697,7 @@ output:
 <pre><code>To stop the execution of a command in RStudio, hit the Stop button in the upper right corner of the console.[^2] This may happen if you&#39;re running a loop or applying a function to a large data frame.
 
 [^2]: The Stop button only appears _during_ a computation.</code></pre>
-<p>To stop the execution of a command in RStudio, hit the Stop button in the upper right corner of the console.<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> This may happen if you’re running a loop or applying a function to a large data frame.</p>
+<p>To stop the execution of a command in RStudio, hit the Stop button in the upper right corner of the console.<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a> This may happen if you’re running a loop or applying a function to a large data frame.</p>
 </div>
 <div id="comments" class="section level4">
 <h4>Comments</h4>
@@ -740,7 +739,8 @@ Xie, Yihui, Alison Presmanes Hill, and Amber Thomas. 2018. <em>Blogdown: Creatin
 <hr />
 <ol>
 <li id="fn1"><p><a href="https://yihui.org/en/2017/12/formatting-papers/">The #1 Reason Why I Don’t Want to Work in Academia: Formatting Papers Is A Huge Waste of Time</a><a href="#fnref1" class="footnote-back">↩︎</a></p></li>
-<li id="fn2"><p>The Stop button only appears <em>during</em> a computation.<a href="#fnref2" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>to export an interactive plot into a stand-alone HTML file, use the <code>htmlwidgets::saveWidget()</code> function. For example to save the plot above as plot.html, we would run the following code: <code>htmlwidgets::saveWidget(as_widget(ggplotly(p)), &quot;plot.html&quot;)</code> Notice we need to call <code>ggplotly()</code> on our plot object, and then call <code>as_widget()</code> on our plotly object.<a href="#fnref2" class="footnote-back">↩︎</a></p></li>
+<li id="fn3"><p>The Stop button only appears <em>during</em> a computation.<a href="#fnref3" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
 
