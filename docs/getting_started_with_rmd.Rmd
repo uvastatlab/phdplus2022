@@ -341,6 +341,16 @@ We can then insert that code into the sentence using an inline R code chunk, lik
 The median home value in the Monticello high school district is `r medians$median_value[2]`.
 ```
 
+It is also worth noting that using backticks without `r` formats text as code or plain text. This can be useful when we don't want code evaluated. For example, here we explain how the `summary()` function works.
+
+```{r eval=FALSE, highlight=FALSE}
+ `summary(homes$totalvalue)` returns summary statistics for the totalvalue column. 
+```
+
+Renders as:
+
+`summary(homes$totalvalue)` returns summary statistics for the totalvalue column.
+
 ### Exercise 6
 
 Go to your "alb_homes_report.Rmd" file.
@@ -368,6 +378,7 @@ This report was generated on <date> using R version <version>. Plots created wit
 ```
 
 3.  Knit the document and inspect
+
 
 ## Using LaTeX to format math expressions
 
@@ -405,6 +416,38 @@ $$ \frac{\$400,000}{100} \times \$0.854 = \$3,416 $$
 ```
 
 2.  Knit the document and inspect
+
+## Adding links
+
+R Markdown will render any URL into an active link. However if you want to name the link you need to use the following syntax:
+
+```
+[name](URL)
+```
+For example:
+
+```
+[PhD Plus](https://phdplus.virginia.edu/) is a university-wide initiative to prepare PhD students and Postdoctoral scholars to become influential professionals in every sector and field.
+```
+
+Renders as:
+
+[PhD Plus](https://phdplus.virginia.edu/) is a university-wide initiative to prepare PhD students and Postdoctoral scholars to become influential professionals in every sector and field.
+
+When users click the link, they will leave your page. To have the link open a new tab, we need to use HTML. Markdown supports HTML, so that is allowed. To make the link open in a new tab, we could use the `<a>` tag with the appropriate attributes.
+
+```
+<a href="https://phdplus.virginia.edu/" target="_blank" rel="noopener noreferrer">PhD Plus</a> is a university-wide initiative to prepare PhD students and Postdoctoral scholars to become influential professionals in every sector and field.
+```
+
+<a href="https://phdplus.virginia.edu/" target="_blank" rel="noopener noreferrer">PhD Plus</a> is a university-wide initiative to prepare PhD students and Postdoctoral scholars to become influential professionals in every sector and field.
+
+### Exercise 8
+
+Go to your "alb_homes_report.Rmd" file.
+
+1. Link the phrase "current real estate tax rate" to `https://www.albemarle.org/Home/Components/News/News/249/` (use either Markdown or HTML)
+2. Knit the document and inspect
 
 ## References and Citations
 
@@ -467,7 +510,7 @@ By default, a Chicago author-date format for citations and references is used. T
 
 Create a BibTeX citation for R with `citation()`. Create a BibTeX citation for R packages with `citation("package-name")`.
 
-### Exercise 8
+### Exercise 9
 
 The workshop files included a file called "refs.bib". Make sure it's in the same place you created your "alb_homes_report.Rmd" file. You can view it with any text editor such as Notepad or TextEdit, or in RStudio.
 
@@ -561,7 +604,7 @@ The R Markdown cheat sheet and reference guide lists many sub-options available 
 
 See also [Section 3.1](https://bookdown.org/yihui/rmarkdown/html-document.html) of the R Markdown book [-@rmd].
 
-### Exercise 9
+### Exercise 10
 
 Go to your "alb_homes_report.Rmd" file.
 

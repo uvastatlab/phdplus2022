@@ -487,6 +487,10 @@ ggplotly(p)</code></pre>
 <pre class="r"><code>medians$median_value[2]</code></pre>
 <p>We can then insert that code into the sentence using an inline R code chunk, like so:</p>
 <pre class="text"><code>The median home value in the Monticello high school district is `r medians$median_value[2]`.</code></pre>
+<p>It is also worth noting that using backticks without <code>r</code> formats text as code or plain text. This can be useful when we don’t want code evaluated. For example, here we explain how the <code>summary()</code> function works.</p>
+<pre class="text"><code> `summary(homes$totalvalue)` returns summary statistics for the totalvalue column. </code></pre>
+<p>Renders as:</p>
+<p><code>summary(homes$totalvalue)</code> returns summary statistics for the totalvalue column.</p>
 <div id="exercise-6" class="section level3">
 <h3>Exercise 6</h3>
 <p>Go to your “alb_homes_report.Rmd” file.</p>
@@ -535,6 +539,26 @@ $$ \frac{\$400,000}{100} \times \$0.854 = \$3,416 $$</code></pre>
 </ol>
 </div>
 </div>
+<div id="adding-links" class="section level2">
+<h2>Adding links</h2>
+<p>R Markdown will render any URL into an active link. However if you want to name the link you need to use the following syntax:</p>
+<pre><code>[name](URL)</code></pre>
+<p>For example:</p>
+<pre><code>[PhD Plus](https://phdplus.virginia.edu/) is a university-wide initiative to prepare PhD students and Postdoctoral scholars to become influential professionals in every sector and field.</code></pre>
+<p>Renders as:</p>
+<p><a href="https://phdplus.virginia.edu/">PhD Plus</a> is a university-wide initiative to prepare PhD students and Postdoctoral scholars to become influential professionals in every sector and field.</p>
+<p>When users click the link, they will leave your page. To have the link open a new tab, we need to use HTML. Markdown supports HTML, so that is allowed. To make the link open in a new tab, we could use the <code>&lt;a&gt;</code> tag with the appropriate attributes.</p>
+<pre><code>&lt;a href=&quot;https://phdplus.virginia.edu/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;PhD Plus&lt;/a&gt; is a university-wide initiative to prepare PhD students and Postdoctoral scholars to become influential professionals in every sector and field.</code></pre>
+<p><a href="https://phdplus.virginia.edu/" target="_blank" rel="noopener noreferrer">PhD Plus</a> is a university-wide initiative to prepare PhD students and Postdoctoral scholars to become influential professionals in every sector and field.</p>
+<div id="exercise-8" class="section level3">
+<h3>Exercise 8</h3>
+<p>Go to your “alb_homes_report.Rmd” file.</p>
+<ol style="list-style-type: decimal">
+<li>Link the phrase “current real estate tax rate” to <code>https://www.albemarle.org/Home/Components/News/News/249/</code> (use either Markdown or HTML)</li>
+<li>Knit the document and inspect</li>
+</ol>
+</div>
+</div>
 <div id="references-and-citations" class="section level2">
 <h2>References and Citations</h2>
 <p>It’s fairly easy to use a citation database with R Markdown. <span class="citation">Xie, Allaire, and Grolemund (2019)</span> recommend using BibTeX databases because they work better with PDFs.</p>
@@ -574,8 +598,8 @@ bibliography: rmarkdown.bib
 <p>By using a citation from a BibTeX file in R Markdown, a reference is automatically generated and inserted at the end of the document. You do not have to use all entries in a BibTeX file, and they don’t have to be stored in any order. Only those references that are cited will be automatically added at the end of the report in the correct order. To add sections <em>after</em> the references (eg, an appendix), see <a href="https://bookdown.org/yihui/rmarkdown-cookbook/bibliography.html">section 4.5</a> of the R Markdown Cookbook <span class="citation">(2020)</span>.</p>
 <p>By default, a Chicago author-date format for citations and references is used. To use another style, you need to specify a Citation Style Language (CSL) file in the <code>csl</code> metadata field. See <a href="https://bookdown.org/yihui/rmarkdown-cookbook/bibliography.html">section 4.5</a> of the R Markdown Cookbook <span class="citation">(2020)</span> for more information.</p>
 <p>Create a BibTeX citation for R with <code>citation()</code>. Create a BibTeX citation for R packages with <code>citation(&quot;package-name&quot;)</code>.</p>
-<div id="exercise-8" class="section level3">
-<h3>Exercise 8</h3>
+<div id="exercise-9" class="section level3">
+<h3>Exercise 9</h3>
 <p>The workshop files included a file called “refs.bib.” Make sure it’s in the same place you created your “alb_homes_report.Rmd” file. You can view it with any text editor such as Notepad or TextEdit, or in RStudio.</p>
 <p>Go to your “alb_homes_report.Rmd” file.</p>
 <ol style="list-style-type: decimal">
@@ -650,8 +674,8 @@ output:
     bibliography: rmarkdown.bib</code></pre>
 <p>The R Markdown cheat sheet and reference guide lists many sub-options available for the various output options. Both are available as PDF files from Help…Cheatsheets in RStudio.</p>
 <p>See also <a href="https://bookdown.org/yihui/rmarkdown/html-document.html">Section 3.1</a> of the R Markdown book <span class="citation">(2019)</span>.</p>
-<div id="exercise-9" class="section level3">
-<h3>Exercise 9</h3>
+<div id="exercise-10" class="section level3">
+<h3>Exercise 10</h3>
 <p>Go to your “alb_homes_report.Rmd” file.</p>
 <ol style="list-style-type: decimal">
 <li>Add the following sub-options to the html_document option.</li>
