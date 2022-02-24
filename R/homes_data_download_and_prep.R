@@ -43,13 +43,12 @@ file.remove("GIS_View_Redacted_ParcelInfo_TXT.zip")
 file.remove("GIS_CardLevelData_new_TXT.zip")
 file.remove("CityView_View_OtherParcelCharacteristics_TXT.zip")
 
-card_level <- read.csv("GIS_CardLevelData_new.txt", stringsAsFactors = FALSE, 
+card_level <- read.csv("GIS_CardLevelData_new.txt", 
                        na.strings = "NULL")
 parcel_level <- read.csv("GIS_View_Redacted_ParcelInfo.txt", 
-                         stringsAsFactors = FALSE, na.strings = "NULL")
+                         na.strings = "NULL")
 other_parcel <- read.csv("CityView_View_OtherParcelCharacteristics.txt", 
-                         stringsAsFactors = FALSE, na.strings = "NULL")
-
+                         na.strings = c("NULL", "N/A"))
 
 # card_level list of variables to keep
 vars <- c("TMP", "CardNum", "YearBuilt", "YearRemodeled", 
