@@ -82,7 +82,7 @@ The template says to click the **Knit** button to convert the R Markdown file to
 
 1.  In RStudio, go to File...New File...R Markdown...
 2.  Select Document - HTML, click OK. (Just leave the title as "Untitled".)
-3.  Save the file (Ctrl + S or Cmd + S) as "alb_homes_report". **Save the file in the folder created when you unzipped the workshop files, which should be called `using_rmarkdown`.** (In other words, save it where the "refs.bib" file is located.)
+3.  Save the file (Ctrl + S or Cmd + S) as "alb_homes_report". **Save the file in the folder created when you unzipped the workshop files, which should be called `05_using_r_markdown`.** (In other words, save it where the "refs.bib" file is located.)
 4.  click Knit.
 5.  Compare the R Markdown file to the output. The output should pop up in a preview window.
 6.  Close the preview and find the HTML file on your computer.
@@ -636,9 +636,9 @@ output:
 Example of adding a footnote. Notice the space between the text and the footnote text. Need to have that.
 
 ```
-To stop the execution of a command in RStudio, hit the Stop button in the upper right corner of the console.[^2] This may happen if you're running a loop or applying a function to a large data frame.
+To stop the execution of a command in RStudio, hit the Stop button in the upper right corner of the console.[^3] This may happen if you're running a loop or applying a function to a large data frame.
 
-[^2]: The Stop button only appears _during_ a computation.
+[^3]: The Stop button only appears _during_ a computation.
 ```
 
 This renders as:
