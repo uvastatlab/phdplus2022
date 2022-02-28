@@ -13,7 +13,7 @@ knitr::opts_chunk$set(echo = TRUE)
 <br>
 
 <img src="../images/Rlogo.png" style="float:left; width:15%; margin-right: 20px">
-The UVA Library's [Research Data Services](https://data.library.virginia.edu) and the UVA Health Sciences Library's <a href="https://guides.hsl.virginia.edu/c.php?g=866544&p=6216976"> Data @ HSL</a> are partnering with UVA's [PhDPlus program](http://phdplus.virginia.edu/) to present Data Literacy in R, a six-session series to build data wrangling and visualization skills.
+The UVA Library's [Research Data Services](https://data.library.virginia.edu) and the UVA Health Sciences Library's <a href="https://guides.hsl.virginia.edu/c.php?g=866544&p=6216976"> Data @ HSL</a> are partnering with UVA's [PhD Plus program](http://phdplus.virginia.edu/) to present Data Literacy in R, a six-session series to build data wrangling and visualization skills.
 
 This site will host the materials for the series.
 
@@ -24,7 +24,7 @@ This site will host the materials for the series.
 * Time: 2:00 - 4:00 p.m.
 * Place: Virtual Zoom meetings
 
-Upon successful completion of this series, PhD students will be eligible for PhD Plus “Data Literacy in R” non-credit credentials on transcripts. These credentials are UVA-endorsed, and are a good opportunity to show demonstrated interest and knowledge in basic data science skills to prospective employers. The sessions are cumulative, so understanding of the material in the prior session is assumed. 
+Upon successful completion of this series, PhD students will be eligible for PhD Plus “Data Literacy in R” non-credit credentials on transcripts. These credentials are UVA-endorsed and demonstrate interest and knowledge in basic data science skills to prospective employers. The sessions are cumulative, so understanding of the material in the prior session is assumed. 
 
 
 
@@ -39,6 +39,7 @@ R is a free, open-source software environment and programming language designed 
 
 [Workshop Materials](https://github.com/uvastatlab/phdplus2022/raw/main/docs/getting-started-R.zip)
 
+<br>
 
 #### **Data Preparation**
 Wednesday, 2/9/2021   
@@ -48,6 +49,8 @@ While many researchers want to jump right into developing models or making predi
 
 [Workshop Materials](https://github.com/uvastatlab/phdplus2022/raw/main/docs/dataprep.zip)
 
+<br>
+
 #### **Data Visualization**
 Wednesday, 2/16/2021   
 Instructor: Marieke Jones  
@@ -55,6 +58,8 @@ Instructor: Marieke Jones
 Exploring our data with graphs allows us to visualize relationships, spot unusual observations, or find unexpected patterns. In this session, we introduce how to effectively use the ggplot2 package to explore and visualize data in R. With its consistent syntax and layered approach to making graphics, ggplot2 has revolutionized data visualization. What previously would have required hours of tedious programming can now be accomplished in a few lines of ggplot2 code. This workshop will introduce the logic behind ggplot2, how to use ggplot2 to explore data, and how to customize and polish ggplot2 graphs. 
 
 [Workshop Materials](https://github.com/uvastatlab/phdplus2022/raw/main/docs/03_dataviz.zip)
+
+<br>
 
 #### **Data Wrangling**
 Wednesday, 2/23/2021   
@@ -64,12 +69,18 @@ One of the most difficult tasks when conducting data analysis is combining dispa
 
 [Workshop Materials](https://github.com/uvastatlab/phdplus2022/raw/main/docs/04_data_wrangling.zip)
 
+<br>
+
 #### **Reporting and Presenting Data using R Markdown**
 Wednesday, 3/2/2021   
 Instructor: Clay Ford    
 
 After we explore, summarize and visualize our data, we likely need to present our findings to an audience. This may be a document, a web page, a slide deck, or even a dashboard. Using R Markdown we can combine R code with narration to quickly create professional reports and presentations, all within RStudio. This means we don't need to copy-and-paste results or plots into another application. We can analyze and write about our data all at once and let RStudio generate the plots and tables. In this final session we'll get you up-and-running with R Markdown so you can create high quality reports, presentations and more. 
 
+
+[Workshop Materials](https://github.com/uvastatlab/phdplus2022/raw/main/docs/05_using_r_markdown.zip)
+
+<br>
 
 #### **Data Literacy in R Final Project**
 Wednesday, 3/16/2021   
