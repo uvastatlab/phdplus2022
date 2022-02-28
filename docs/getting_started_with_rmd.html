@@ -1730,9 +1730,10 @@ of the R Markdown book <span class="citation">(2019)</span>.</p>
 <li>Update the <code>title:</code> field in the metadata at the top of
 the file. Call it “Albemarle Homes Report”. Make sure to use
 quotes.</li>
-<li>In the “setup” global options code chunk, add the following code.
-This loads the packages we’re going to use, creates some objects we’ll
-use, and does some data wrangling.</li>
+<li>In the first code chunk that begins
+<code>{r setup, include=FALSE}</code>, add the following code. This
+loads the packages we’re going to use, creates some objects we’ll use,
+and does some data wrangling.</li>
 </ol>
 <pre class="r"><code>library(tidyverse)
 library(scales)
@@ -1812,9 +1813,12 @@ output:</p>
 ## 3 Western Albemarle 9,361  $500,400
 </code></pre>
 <p>That doesn’t look bad, but our audience probably doesn’t care if it’s
-a 3 x 3 “tibble”. Fortunately we have some options for easily producing
-tables. A popular function for this is the <code>kable</code> function
-in the {knitr} package. Simply use it with a data frame, like so:</p>
+a 3 x 3 “tibble”. And metadata like <code>&lt;fct&gt;</code> and
+<code>&lt;chr&gt;</code> are just going to confuse them. And why are
+there a bunch of pound signs? Fortunately we have some options for
+easily producing tables. A popular function for this is the
+<code>kable</code> function in the {knitr} package. Simply use it with a
+data frame, like so:</p>
 <pre class="r"><code>knitr::kable(medians)</code></pre>
 <table>
 <thead>

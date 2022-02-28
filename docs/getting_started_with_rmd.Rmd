@@ -161,7 +161,7 @@ Go to your "alb_homes_report.Rmd" file.
 
 1.  Delete the example text (everything from line 12 on down)
 2.  Update the `title:` field in the metadata at the top of the file. Call it "Albemarle Homes Report". Make sure to use quotes.
-3.  In the "setup" global options code chunk, add the following code. This loads the packages we're going to use, creates some objects we'll use, and does some data wrangling.
+3.  In the first code chunk that begins `{r setup, include=FALSE}`, add the following code. This loads the packages we're going to use, creates some objects we'll use, and does some data wrangling.
 
 ```{r eval=FALSE, results='asis'}
 library(tidyverse)
@@ -232,7 +232,7 @@ At the end of exercise we saw the following in our Albemarle Homes output:
 
 ```
 
-That doesn't look bad, but our audience probably doesn't care if it's a 3 x 3 "tibble". Fortunately we have some options for easily producing tables. A popular function for this is the `kable` function in the {knitr} package. Simply use it with a data frame, like so:
+That doesn't look bad, but our audience probably doesn't care if it's a 3 x 3 "tibble". And metadata like `<fct>` and `<chr>` are just going to confuse them. And why are there a bunch of pound signs? Fortunately we have some options for easily producing tables. A popular function for this is the `kable` function in the {knitr} package. Simply use it with a data frame, like so:
 
 ```{r}
 knitr::kable(medians)

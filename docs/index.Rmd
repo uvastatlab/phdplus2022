@@ -1,5 +1,5 @@
 ---
-title: "2022 Phd+ Data Literacy in R"
+title: "2022 PhD Plus Data Literacy in R"
 author: ""
 date: ""
 output: html_document
@@ -68,7 +68,7 @@ One of the most difficult tasks when conducting data analysis is combining dispa
 Wednesday, 3/2/2021   
 Instructor: Clay Ford    
 
-After we explore, summarize and visualize our data, we likely need to present our findings to an audience. This may be a document, a web page, a slide deck, or even a dashboard. Using R Markdown we can combine R code with narration to quickly create professional reports and presentations, all within RStudio. This means we don't need to copy-and-paste results or plots into another application. We can analyze and write about our data all at once and let RStudio generate the plots and tables. In this final session we'll get you up-and-running with R Markdown so you can create high quality documents, reports, presentations and more. 
+After we explore, summarize and visualize our data, we likely need to present our findings to an audience. This may be a document, a web page, a slide deck, or even a dashboard. Using R Markdown we can combine R code with narration to quickly create professional reports and presentations, all within RStudio. This means we don't need to copy-and-paste results or plots into another application. We can analyze and write about our data all at once and let RStudio generate the plots and tables. In this final session we'll get you up-and-running with R Markdown so you can create high quality reports, presentations and more. 
 
 
 #### **Data Literacy in R Final Project**
