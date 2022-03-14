@@ -61,9 +61,13 @@ summary(d)
 ```
 
 ```{r}
-d %>% 
-  select(where(is.numeric)) %>% 
-  map(summary)
+names(d)
+nrow(d)
+```
+
+```{r}
+summary(d$mag)
+table(d$type)
 ```
 
 
