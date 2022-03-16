@@ -40,8 +40,8 @@ Using the URL above, import the data as a data frame object and name it "d".
 
 Tip: use the `read_csv()` function in the readr package. Recall that `read_csv()` works with URLs. The base R `read.csv` works just fine, but the `read_csv` function automatically formats the dates for us.
 
-```{r}
-
+```{r message=FALSE}
+library(tidyverse)
 ```
 
 BACKUP PLAN: If for some reason the USGS site is down, please use this URL: https://github.com/uvastatlab/phdplus2022/raw/main/data/all_month.csv 
@@ -151,7 +151,7 @@ How does the distribution of magnitude vary between seismic events?
 ```
 
 
-# 9. Visualize the relationship between depth and depth error
+## 9. Visualize the relationship between depth and depth error
 
 The "depth" variable measures the depth of a seismic event in kilometers.
 
